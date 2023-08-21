@@ -4,8 +4,8 @@ import { provide } from "inversify-binding-decorators";
 import { CreateError } from "../../common/errors/create.error";
 
 import { SpeciesRepository } from "./species.repository";
-import { CreateSpecieDto } from "./dto/create-specie.dto";
 import { NotFoundError } from "../../common/errors/not-found.error";
+import { ICreateSpecie } from "./interfaces/specie";
 
 @provide(SpeciesService)
 export class SpeciesService {
@@ -28,7 +28,7 @@ export class SpeciesService {
         return response;
     }
 
-    async create(dto: CreateSpecieDto) {
+    async create(dto: ICreateSpecie) {
         const response = await this._speciesRepository.create(dto);
 
         if (!response) throw new CreateError("Error creating specie");

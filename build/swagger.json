@@ -6,7 +6,73 @@
 		"requestBodies": {},
 		"responses": {},
 		"schemas": {
-			"CreateSpecieDto": {
+			"Pick_ISpecie.Exclude_keyofISpecie.id-or-creado-or-editado__": {
+				"properties": {
+					"nombre": {
+						"type": "string"
+					},
+					"clasificacion": {
+						"type": "string"
+					},
+					"designacion": {
+						"type": "string"
+					},
+					"altura_media": {
+						"type": "string"
+					},
+					"colores_de_piel": {
+						"type": "string"
+					},
+					"color_de_pelo": {
+						"type": "string"
+					},
+					"colores_ojos": {
+						"type": "string"
+					},
+					"esperanza_de_vida_media": {
+						"type": "string"
+					},
+					"mundo_natal": {
+						"type": "string"
+					},
+					"lengua": {
+						"type": "string"
+					},
+					"gente": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"peliculas": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"url": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"nombre",
+					"clasificacion",
+					"designacion",
+					"altura_media",
+					"colores_de_piel",
+					"color_de_pelo",
+					"colores_ojos",
+					"esperanza_de_vida_media",
+					"mundo_natal",
+					"lengua",
+					"gente",
+					"peliculas",
+					"url"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"ICreateSpecie": {
 				"properties": {
 					"nombre": {
 						"type": "string"
@@ -177,7 +243,7 @@
 					"content": {
 						"application/json": {
 							"schema": {
-								"$ref": "#/components/schemas/CreateSpecieDto"
+								"$ref": "#/components/schemas/ICreateSpecie"
 							}
 						}
 					}

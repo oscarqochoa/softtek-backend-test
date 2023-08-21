@@ -2,8 +2,8 @@ import { inject } from "inversify";
 import { Body, Get, Path, Post, Query, Route, SuccessResponse, Tags } from "tsoa";
 
 import { provideSingleton } from "../../util/provideSingleton";
-import { CreateSpecieDto } from "./dto/create-specie.dto";
 import { SpeciesService } from "./species.service";
+import { ICreateSpecie } from "./interfaces/specie";
 
 @Tags("Species")
 @Route('species')
@@ -31,7 +31,7 @@ export class EspeciesController {
 
     @SuccessResponse(201)
     @Post()
-    async create(@Body() dto: CreateSpecieDto): Promise<any> {
+    async create(@Body() dto: ICreateSpecie): Promise<any> {
         return await this._speciesService.create(dto);
     }
 

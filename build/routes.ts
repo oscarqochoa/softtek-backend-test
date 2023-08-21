@@ -14,7 +14,12 @@ import * as express from 'express';
 // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
 
 const models: TsoaRoute.Models = {
-    "CreateSpecieDto": {
+    "Pick_ISpecie.Exclude_keyofISpecie.id-or-creado-or-editado__": {
+        "dataType": "refAlias",
+        "type": {"dataType":"nestedObjectLiteral","nestedProperties":{"nombre":{"dataType":"string","required":true},"clasificacion":{"dataType":"string","required":true},"designacion":{"dataType":"string","required":true},"altura_media":{"dataType":"string","required":true},"colores_de_piel":{"dataType":"string","required":true},"color_de_pelo":{"dataType":"string","required":true},"colores_ojos":{"dataType":"string","required":true},"esperanza_de_vida_media":{"dataType":"string","required":true},"mundo_natal":{"dataType":"string","required":true},"lengua":{"dataType":"string","required":true},"gente":{"dataType":"array","array":{"dataType":"string"},"required":true},"peliculas":{"dataType":"array","array":{"dataType":"string"},"required":true},"url":{"dataType":"string","required":true}},"validators":{}},
+    },
+    // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+    "ICreateSpecie": {
         "dataType": "refObject",
         "properties": {
             "nombre": {"dataType":"string","required":true},
@@ -111,7 +116,7 @@ export function RegisterRoutes(app: express.Router) {
 
             async function EspeciesController_create(request: any, response: any, next: any) {
             const args = {
-                    dto: {"in":"body","name":"dto","required":true,"ref":"CreateSpecieDto"},
+                    dto: {"in":"body","name":"dto","required":true,"ref":"ICreateSpecie"},
             };
 
             // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa

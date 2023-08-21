@@ -23,13 +23,13 @@ export const starshipsSchema = async (client: DynamoDBClient) => {
                 TableName: config.get("dbTables.starships.name"),
                 AttributeDefinitions: [
                     {
-                        AttributeName: "ProductID",
+                        AttributeName: "id",
                         AttributeType: "S",
                     },
                 ],
                 KeySchema: [
                     {
-                        AttributeName: "ProductID",
+                        AttributeName: "id",
                         KeyType: "HASH",
                     },
                 ],
