@@ -1,0 +1,213 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"CreateSpecieDto": {
+				"properties": {
+					"nombre": {
+						"type": "string"
+					},
+					"clasificacion": {
+						"type": "string"
+					},
+					"designacion": {
+						"type": "string"
+					},
+					"altura_media": {
+						"type": "string"
+					},
+					"colores_de_piel": {
+						"type": "string"
+					},
+					"color_de_pelo": {
+						"type": "string"
+					},
+					"colores_ojos": {
+						"type": "string"
+					},
+					"esperanza_de_vida_media": {
+						"type": "string"
+					},
+					"mundo_natal": {
+						"type": "string"
+					},
+					"lengua": {
+						"type": "string"
+					},
+					"gente": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"peliculas": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"url": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"nombre",
+					"clasificacion",
+					"designacion",
+					"altura_media",
+					"colores_de_piel",
+					"color_de_pelo",
+					"colores_ojos",
+					"esperanza_de_vida_media",
+					"mundo_natal",
+					"lengua",
+					"gente",
+					"peliculas",
+					"url"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {}
+	},
+	"info": {
+		"title": "serverless-typescript-swapi",
+		"version": "1.0.0",
+		"description": "TypeScript + OpenAPI + Serverless + Swapi project",
+		"license": {
+			"name": "MIT"
+		},
+		"contact": {
+			"name": "Oscar Quiroz"
+		}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/species/show/{id}": {
+			"get": {
+				"operationId": "Show",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Species"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/species/get": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Species"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "id",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "nombre",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/species": {
+			"post": {
+				"operationId": "Create",
+				"responses": {
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Species"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateSpecieDto"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/swapi/species/get": {
+			"get": {
+				"operationId": "GetSpecies",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Swapi"
+				],
+				"security": [],
+				"parameters": []
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}

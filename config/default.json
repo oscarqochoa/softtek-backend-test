@@ -2,5 +2,16 @@
   "server": {
     "port": 3000
   },
-  "authSecret": "secret"
+  "authSecret": "secret",
+  "dynamodb": {
+    "endpoint": "http://localhost:8000"
+  },
+  "dbTables": {
+    "species": {
+      "name": "Species"
+    },
+    "starships": {
+      "name": "Starships"
+    }
+  }
 }

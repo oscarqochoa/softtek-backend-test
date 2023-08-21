@@ -1,7 +1,7 @@
 import express, { json, urlencoded, Request as ExRequest, Response as ExResponse, NextFunction } from "express";
 import { RegisterRoutes } from "../build/routes";
 import swaggerUi from "swagger-ui-express";
-import { errorHandler } from "./errorHandler";
+import { errorHandler } from "./error-handler";
 
 export const app = express();
 

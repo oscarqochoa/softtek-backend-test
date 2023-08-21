@@ -1,5 +1,24 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "serverlessConsole.services": [
+    {
+      "type": "dynamodb",
+      "title": "Species",
+      "tableName": "Species",
+      "region": "local",
+      "endpoint": "http://localhost:8000"
+    },
+    {
+      "type": "dynamodb",
+      "title": "Starships",
+      "tableName": "Starships",
+      "region": "local",
+      "endpoint": "http://localhost:8000"
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 {
-  "name": "ts-serverless-openapi",
+  "name": "serverless-typescript-swapi",
   "version": "1.0.0",
-  "description": "TypeScript + OpenAPI + Serverless project template",
+  "description": "TypeScript + OpenAPI + Serverless + Swapi project",
   "scripts": {
     "test": "tsoa spec-and-routes && jest --silent",
     "test:verbose": "tsoa spec-and-routes && jest",
@@ -12,7 +12,7 @@
     "build": "tsoa spec-and-routes && tsc",
     "start": "node build/src/server.js"
   },
-  "author": "Tomasz Tarnowski<youtube@tomasztarnowski.com>",
+  "author": "Oscar Quiroz",
   "license": "MIT",
   "devDependencies": {
     "@types/aws-lambda": "^8.10.102",
@@ -37,8 +37,14 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.226.0",
+    "@aws-sdk/util-dynamodb": "^3.226.0",
     "@vendia/serverless-express": "^4.10.1",
     "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1440.0",
+    "axios": "^1.4.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
     "config": "^3.3.8",
     "express": "^4.18.2",
     "inversify": "^6.0.1",

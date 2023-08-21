@@ -1,7 +1,6 @@
 .serverless
 node_modules
-.build
 .vscode/*
 !.vscode/settings.json
-build
 .DS_Store
+.tmp
